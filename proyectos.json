@@ -1,0 +1,33 @@
+[
+    {
+      "nombre": "El Gaucho",
+      "descripcion": "Juego 3D en tercera persona donde un gaucho protege a su familia de animales agresivos infectados tras un accidente quimico, combinando acción, supervivencia y progresión de armas en un entorno rural.",
+      "imagen": "src/pollo.png",
+      "tecnologias": ["Unity", "C#"]
+    },
+    {
+      "nombre": "Hotel Elegance Place",
+      "descripcion": "Sitio web de un hotel.",
+      "imagen": "src/logo-hotel.png",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "nombre": "Ritmica",
+      "descripcion": "Sitio web de una escuela de baile.",
+      "imagen": "src/logo-ritmica.png",
+      "tecnologias": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "nombre": "Corrector Ortográfico",
+      "descripcion": "Aplicación que analiza el texto introducido por el usuario, detecta errores ortográficos y sugiere correcciones automáticas o manuales para mejorar la calidad del contenido.",
+      "imagen": "src/logo-corrector-ortografico.png",
+      "tecnologias": ["Java"]
+    },
+    {
+      "nombre": "Aleph",
+      "descripcion": "Aleph es un lenguaje de programación diseñado para la manipulación de conjuntos y listas. Cuenta con estructuras de control y funciones, enfocado en simplicidad y claridad para tareas relacionadas con teoría de conjuntos y autómatas.",
+      "imagen": "src/logo-aleph.png",
+      "tecnologias": ["C", "Flex", "Bison"]
+    }
+]
+  

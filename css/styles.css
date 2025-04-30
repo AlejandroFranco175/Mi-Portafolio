@@ -1,0 +1,66 @@
+body{
+    padding: 10px;
+    background: radial-gradient(circle, #024873 30%, #0A0C0D 100%);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+.tag {
+    display: inline-block;
+    background-color: #88DFF2;
+    color: #0A0C0D;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 2px;
+    font-size: 0.8rem;
+}
+
+.nav-bg{
+    background-color: transparent;
+}
+
+.nav-btn{
+    background: radial-gradient(circle, #024873 90%, #0A0C0D 100%);
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.btn{
+    background-color: #88DFF2;
+    color: #0A0C0D;
+    border-color: #024873;
+}
+
+.foto-perfil {
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+    background: radial-gradient(circle, #024873 10%, #0A0C0D 100%);
+}
+.card-img-top {
+    margin: 1vh auto;
+    height: 300px;
+    object-fit: contain;
+    background-color: transparent;
+}
+  
+  
+
+@media (max-width: 768px) {
+    .foto-perfil {
+        width: 50%;
+    }
+    .nav-btn{
+        background: radial-gradient(circle, #024873 40%, #0A0C0D 100%);
+    }
+}
