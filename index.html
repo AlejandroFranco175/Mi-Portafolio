@@ -12,24 +12,24 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
   <div class="container">
-    <a class="navbar-brand text-light" href="#">Mi Portafolio</a>
+    <a class="navbar-brand text-light" href="#" onclick="mostrarSeccion('about')">Mi Portafolio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link text-center text-light nav-btn" href="#" onclick="mostrarSeccion('about')">Acerca de mí</a>
+          <a class="nav-link text-center text-light nav-btn" href="#" data-id="about" onclick="mostrarSeccion('about')">Acerca de mí</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center text-light nav-btn" href="#" onclick="mostrarSeccion('projects')">Proyectos</a>
+          <a class="nav-link text-center text-light nav-btn" href="#" data-id="projects" onclick="mostrarSeccion('projects')">Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center text-light nav-btn" href="#" onclick="mostrarSeccion('contact')">Contacto</a>
+          <a class="nav-link text-center text-light nav-btn" href="#" data-id="contact" onclick="mostrarSeccion('contact')">Contacto</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-center text-light nav-btn" href="#" onclick="mostrarSeccion('admin')">Admin</a>
-        </li>          
+        <!-- <li class="nav-item">
+            <a class="nav-link text-center text-light nav-btn" href="#" data-id="admin" onclick="mostrarSeccion('admin')">Admin</a>
+        </li>           -->
       </ul>
     </div>
   </div>
@@ -52,6 +52,11 @@
         <p>También tengo experiencia práctica el desarrollo de videojuegos en entornos como Unity (C#), desarrollo web con PHP y bases de datos con XAMPP.</p>
         <p>A lo largo de mi formación he enfrentado desafíos personales y académicos que me han enseñado a ser resiliente, organizado y perseverante. Combino una sólida base teórica con una mentalidad práctica, orientada a la resolución de problemas reales mediante herramientas tecnológicas.</p>
         <p>Actualmente, estoy enfocado en el crecimiento profesional, tanto en lo académico como en lo técnico, con el objetivo de aportar valor en proyectos donde la lógica, la estructura y la creatividad sean fundamentales.</p>
+        <br>
+
+        <h2>Habilidades</h2>
+        <div id="tecnologias" class="d-flex justify-content-center gap-4 mt-4 flex-wrap"></div>
+
       </div>
     </div>
   </div>
@@ -71,7 +76,7 @@
       <div class="col-11 col-md-6">
         <h1>Contacto</h1>
         <p>Podés escribirme un correo:</p>
-        <form action="">
+        <form action="" id="form-contact">
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" required>
@@ -84,48 +89,39 @@
             <label for="mensaje" class="form-label">Mensaje</label>
             <textarea class="form-control" id="mensaje" rows="3" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn">Enviar</button>
         </form>
+        <!-- Modal Bootstrap -->
+        <div class="modal fade" id="modalExito" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+              <p class="fs-5 mb-4">Mensaje enviado correctamente</p>
+              <button type="button" class="btn btn-success w-50 mx-auto" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <p>Enviarme un mensaje por whatsapp:</p>
+        <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
+          <a href="https://wa.me/+5493874522964" target="_blank">
+            <img src="src/ico-whatsapp.png" class="icon rounded-circle" alt="WhatsApp">
+          </a>
+        </div>
 
         <br>
         <p>O seguirme en mis redes sociales:</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/ale-franco-373224325/
-            " target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/AlejandroFranco175" target="_blank">GitHub</a></li>
-          <li><a href="https://www.instagram.com/ale._.pue?igsh=bjM3OG10amIzMjF6" target="_blank">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Administración -->
-  <div id="admin" class="section">
-    <div class="row justify-content-center text-center text-md-start align-items-start mb-4">
-      <div class="col-11 col-md-6">
-        <h1>Administración</h1>
-        <h2>Agregar un proyecto</h2>
-        <br>
-        <form id="formProyecto">
-          <div class="mb-3">
-            <label class="form-label">Nombre del Proyecto</label>
-            <input type="text" class="form-control" id="nombreProyecto" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Descripción</label>
-            <textarea class="form-control" id="descripcionProyecto" rows="3" required></textarea>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">URL de la Imagen</label>
-            <input type="url" class="form-control" id="imagenProyecto" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Tecnologías</label>
-            <input type="text" class="form-control" id="tecnologiasProyecto" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Agregar Proyecto</button>
-        </form>
+        <div class="d-flex justify-content-center gap-4 mt-4 flex-wrap">
+          <a href="https://github.com/AlejandroFranco175" target="_blank">
+            <img src="src/ico-github.png" class="icon" alt="Github">
+          </a>
+          <a href="https://www.instagram.com/ale._.pue?igsh=bjM3OG10amIzMjF6" target="_blank">
+            <img src="src/ico-ig.png" class="icon" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/in/ale-franco-373224325/" target="_blank">
+            <img src="src/ico-linkedin.png" class="icon" alt="LinkedIn">
+          </a>
+        </div>
       </div>
     </div>
 
@@ -138,15 +134,17 @@
   <div class="container text-center">
     <p class="mb-1">&copy; 2025 Alejandro Franco.</p>
     <div>
-      <a href="https://www.linkedin.com/in/ale-franco-373224325/" target="_blank" class="text-light me-3">LinkedIn</a>
+      <a href="https://wa.me/+5493874522964" target="_blank" class="text-light me-3">Whatsapp</a>
+      <a href="https://www.instagram.com/ale._.pue?igsh=bjM3OG10amIzMjF6" target="_blank" class="text-light me-3">Instagram</a>
       <a href="https://github.com/AlejandroFranco175" target="_blank" class="text-light me-3">GitHub</a>
-      <a href="https://www.instagram.com/ale._.pue?igsh=bjM3OG10amIzMjF6" target="_blank" class="text-light">Instagram</a>
+      <a href="https://www.linkedin.com/in/ale-franco-373224325/" target="_blank" class="text-light me-3">LinkedIn</a>
     </div>
   </div>
 </footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

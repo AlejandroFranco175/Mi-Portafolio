@@ -15,7 +15,7 @@ body{
 }
 .tag {
     display: inline-block;
-    background-color: #88DFF2;
+    background-color: #00aaff;
     color: #0A0C0D;
     border-radius: 10px;
     padding: 2px 8px;
@@ -28,15 +28,30 @@ body{
 }
 
 .nav-btn{
-    background: radial-gradient(circle, #024873 90%, #0A0C0D 100%);
+    background: radial-gradient(circle, #024873 80%, #0A0C0D 100%);
     border-radius: 10px;
-    margin: 2px;
+    margin: 3px;
+    transition: all 0.2s ease;
+}
+.nav-btn:hover {
+    transform: scale(1.3);
+    background: radial-gradient(circle, #024873 80%, #0A0C0D 100%);
+}
+.nav-btn.active {
+    background-color: #00aaff;
+    background: radial-gradient(circle, #024873 40%, #00aaff 100%);
 }
 
 .btn{
-    background-color: #88DFF2;
-    color: #0A0C0D;
+    background-color: #00aaff;
+    color: #ffffff;
     border-color: #024873;
+}
+.btn:hover{
+    background-color: #40bfff;
+}
+.btn:active{
+    background-color: #80d5ff;
 }
 
 .foto-perfil {
@@ -48,11 +63,31 @@ body{
     background: radial-gradient(circle, #024873 10%, #0A0C0D 100%);
 }
 .card-img-top {
-    margin: 1vh auto;
+    padding: 3px;
     height: 300px;
     object-fit: contain;
     background-color: transparent;
 }
+
+.icon {
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease;
+}
+.icon:hover {
+    transform: scale(1.2);
+}
+
+#modalExito .modal-content {
+    background: radial-gradient(circle, #024873 40%, #0A0C0D 100%);
+    border-radius: 10px;
+}
+#modalExito .btn-success {
+    background-color: #40bfff;
+}
+#modalExito .btn-success:hover {
+    background-color: #80d5ff;
+}  
   
   
 
@@ -62,5 +97,9 @@ body{
     }
     .nav-btn{
         background: radial-gradient(circle, #024873 40%, #0A0C0D 100%);
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
     }
 }

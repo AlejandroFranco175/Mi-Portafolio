@@ -3,31 +3,36 @@
       "nombre": "El Gaucho",
       "descripcion": "Juego 3D en tercera persona donde un gaucho protege a su familia de animales agresivos infectados tras un accidente quimico, combinando acción, supervivencia y progresión de armas en un entorno rural.",
       "imagen": "src/pollo.png",
-      "tecnologias": ["Unity", "C#"]
+      "tecnologias": ["Unity", "C#"],
+      "link": ""
     },
     {
       "nombre": "Hotel Elegance Place",
       "descripcion": "Sitio web de un hotel.",
       "imagen": "src/logo-hotel.png",
-      "tecnologias": ["HTML", "CSS", "JavaScript"]
+      "tecnologias": ["HTML", "CSS", "JavaScript"],
+      "link":"https://alejandrofranco175.github.io/Hotel-Helegance-Place/"
     },
     {
       "nombre": "Ritmica",
-      "descripcion": "Sitio web de una escuela de baile.",
+      "descripcion": "Sitio web de una escuela de gimnasia rítmica.",
       "imagen": "src/logo-ritmica.png",
-      "tecnologias": ["HTML", "CSS", "JavaScript"]
+      "tecnologias": ["HTML", "CSS", "JavaScript"],
+      "link":"https://alejandrofranco175.github.io/Ritmica/"
     },
     {
       "nombre": "Corrector Ortográfico",
       "descripcion": "Aplicación que analiza el texto introducido por el usuario, detecta errores ortográficos y sugiere correcciones automáticas o manuales para mejorar la calidad del contenido.",
       "imagen": "src/logo-corrector-ortografico.png",
-      "tecnologias": ["Java"]
+      "tecnologias": ["Java"],
+      "link":"https://github.com/AlejandroFranco175/Corrector-Ortografico"
     },
     {
       "nombre": "Aleph",
       "descripcion": "Aleph es un lenguaje de programación diseñado para la manipulación de conjuntos y listas. Cuenta con estructuras de control y funciones, enfocado en simplicidad y claridad para tareas relacionadas con teoría de conjuntos y autómatas.",
       "imagen": "src/logo-aleph.png",
-      "tecnologias": ["C", "Flex", "Bison"]
+      "tecnologias": ["C", "Flex y Bison"],
+      "link":"https://github.com/AlejandroFranco175/Aleph"
     }
 ]
   

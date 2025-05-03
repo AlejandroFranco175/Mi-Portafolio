@@ -1,0 +1,51 @@
+[
+  {
+    "nombre": "HTML",
+    "src": "src/tecnologias/html5.png"
+  },
+  {
+    "nombre": "CSS",
+    "src": "src/tecnologias/css3.png"
+  },
+  {
+    "nombre": "JavaScript",
+    "src": "src/tecnologias/javascript.png"
+  },
+  {
+    "nombre": "Bootstrap",
+    "src": "src/tecnologias/bootstrap.png"
+  },
+  {
+    "nombre": "Python",
+    "src": "src/tecnologias/python.png"
+  },
+  {
+    "nombre": "C",
+    "src": "src/tecnologias/c.png"
+  },
+  {
+    "nombre": "C#",
+    "src": "src/tecnologias/csharp.png"
+  },
+  {
+    "nombre": "Unity",
+    "src": "src/tecnologias/unity.png"
+  },
+  {
+    "nombre": "Java",
+    "src": "src/tecnologias/java.png"
+  },
+  {
+    "nombre": "PHP",
+    "src": "src/tecnologias/php.png"
+  },
+  {
+    "nombre": "MySQL",
+    "src": "src/tecnologias/mysql.png"
+  },
+  {
+    "nombre": "Flex y Bison",
+    "src": "src/tecnologias/flex-bison.png"
+  }
+]
+  
