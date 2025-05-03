@@ -134,16 +134,3 @@ document.querySelector("form").addEventListener("submit", function (e) {
   });
 });
 
-//Abrir el pdf del CV o descargarlo en celulares>
-
-function abrirPdf() {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    window.location.href = 'src/mi-cv.pdf'; // Esto forzará la descarga en muchos móviles
-  } else {
-    window.open('src/mi-cv.pdf', '_blank');
-  }
-}
-
-
-  
