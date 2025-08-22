@@ -88,7 +88,7 @@ function cargarProyectos() {
 
 // Codigo para enviar el correo desde EmailJS:
 
-emailjs.init("uYk3tjLCxwc1HxFaq");
+emailjs.init("qxaO_J-e3eIWBeJIy");
 
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
