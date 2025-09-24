@@ -1,17 +1,23 @@
-// URL base del servidor
 const BASE_URL = "https://alefranco.alwaysdata.net/projects/";
 
 function mostrarSeccion(id) {
+  // Colapsar navbar
+  const navbarCollapse = document.getElementById('navbarNav');
+  if (navbarCollapse.classList.contains('show')) {
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+      toggle: false
+    });
+    bsCollapse.hide();
+  }
+
   // Mostrar sección
   document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 
-  // Actualizar clase activa en navbar
   document.querySelectorAll('.nav-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.id === id);
   });
 
-  // Cargar contenido dinámico si aplica
   if (id === "about") {
     cargarTecnologias();
   } else if (id === "projects") {
@@ -20,7 +26,7 @@ function mostrarSeccion(id) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  mostrarSeccion("about"); // se llama cuando se carga el DOM
+  mostrarSeccion("about");
 });
 
 function cargarTecnologias() {
@@ -77,7 +83,7 @@ function cargarProyectos() {
     });
 }
 
-// Codigo para enviar el correo desde EmailJS:
+// Codigo para enviar el correo
 emailjs.init("qxaO_J-e3eIWBeJIy");
 
 document.querySelector("form").addEventListener("submit", function (e) {
@@ -103,14 +109,12 @@ document.querySelector("form").addEventListener("submit", function (e) {
   };
 
   Promise.all([
-    emailjs.send("service_y89f4gk", "template_ggy7gip", templateParams1),
-    emailjs.send("service_y89f4gk", "template_ug8p703", templateParams2)
+    emailjs.send("service_acl51kc", "template_ggy7gip", templateParams1),
+    emailjs.send("service_acl51kc", "template_ug8p703", templateParams2)
   ])
   .then(() => {
-    // Limpiar formulario
     this.reset();
 
-    // Mostrar modal de éxito con Bootstrap
     const modal = new bootstrap.Modal(document.getElementById("modalExito"));
     modal.show();
   })
@@ -122,4 +126,33 @@ document.querySelector("form").addEventListener("submit", function (e) {
     btn.disabled = false;
     btn.textContent = "Enviar";
   });
+});
+
+// Esto pa arreglar la advertencia del modal
+document.addEventListener('DOMContentLoaded', function() {
+  const modalExito = document.getElementById('modalExito');
+  
+  if (modalExito) {
+    // Cuando el modal se muestra, enfocar el botón OK
+    modalExito.addEventListener('shown.bs.modal', function() {
+      const okButton = this.querySelector('.btn-success');
+      okButton.focus();
+    });
+    
+    // Cuando el modal se oculta, quitar el focus manualmente
+    modalExito.addEventListener('hide.bs.modal', function() {
+      const okButton = this.querySelector('.btn-success');
+      okButton.blur();
+    });
+    
+    // Cuando el modal se ha ocultado completamente, mover el focus
+    modalExito.addEventListener('hidden.bs.modal', function() {
+      const submitBtn = document.querySelector('form button[type="submit"]');
+      if (submitBtn) {
+        setTimeout(() => {
+          submitBtn.focus();
+        }, 50);
+      }
+    });
+  }
 });
